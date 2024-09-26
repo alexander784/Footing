@@ -7,10 +7,11 @@ import Royal2 from './assets/Royalfc2.jpeg';
 import Royal3 from './assets/Royalfc3.jpeg';
 import Royal4 from './assets/Royalfc4.jpeg';
 import Royal5 from './assets/Royalfc5.jpeg';
-
+import About from './components/About';
+import balling from './assets/balling.avif';
 const Home = () => {
     const royal = [
-        { image: Royal1 },
+        { image: balling },
         { image: Royal2 },
         { image: Royal3 },
         { image: Royal4 },
@@ -31,6 +32,7 @@ const Home = () => {
     };
 
     return (
+        <div className='bg-blue-300'>
         <div className="relative py-16 px-8">
             <Slider {...sliderSettings}>
                 {
@@ -42,7 +44,9 @@ const Home = () => {
                 }
             </Slider>
         </div>
+        </div>
     );
 }
+<About />
 
 export default Home;
