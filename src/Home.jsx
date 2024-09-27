@@ -2,20 +2,19 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import Royal1 from './assets/Royalfc1.jpeg';
-import Royal2 from './assets/Royalfc2.jpeg';
-import Royal3 from './assets/Royalfc3.jpeg';
 import Royal4 from './assets/Royalfc4.jpeg';
 import Royal5 from './assets/Royalfc5.jpeg';
 import About from './components/About';
 import balling from './assets/balling.avif';
 import homepage from './assets/homepage.avif';
+import homepage1 from './assets/homepage1.avif';
+import ball1 from './assets/ball1.avif';
 const Home = () => {
     const royal = [
         { image: balling },
         { image: homepage},
-        { image: Royal3 },
-        { image: Royal4 },
+        { image: homepage1},
+        { image: ball1 },
         { image: Royal5 },
     ];
 
