@@ -9,10 +9,11 @@ import Royal4 from './assets/Royalfc4.jpeg';
 import Royal5 from './assets/Royalfc5.jpeg';
 import About from './components/About';
 import balling from './assets/balling.avif';
+import homepage from './assets/homepage.avif';
 const Home = () => {
     const royal = [
         { image: balling },
-        { image: Royal2 },
+        { image: homepage},
         { image: Royal3 },
         { image: Royal4 },
         { image: Royal5 },
@@ -44,9 +45,9 @@ const Home = () => {
                 }
             </Slider>
         </div>
+       <About />
         </div>
     );
 }
-<About />
 
 export default Home;
