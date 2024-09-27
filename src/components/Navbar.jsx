@@ -15,7 +15,7 @@ const Navbar = () => {
           <a href='#' className='text-gray-300 hover:text-white'>Team</a>
           <a href='/news' className='text-gray-300 hover:text-white'>News</a>
           <a href='#' className='text-gray-300 hover:text-white'>New signings</a>
-          <a href='/player' className='text-gray-300 hover:text-white'>Players</a>
+          <a href='/players INfo' className='text-gray-300 hover:text-white'>Players Info</a>
           <a href='#' className='text-gray-300 hover:text-white'>Shop</a>
           <a href='#' className='text-gray-300 hover:text-white'>Gallery</a>
           <a href='#' className='text-gray-300 hover:text-white'>Contact Us</a>
