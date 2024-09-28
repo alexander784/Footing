@@ -9,7 +9,7 @@ import balling from './assets/balling.avif';
 import homepage from './assets/homepage.avif';
 import homepage1 from './assets/homepage1.avif';
 import ball1 from './assets/ball1.avif';
-import News from './components/pages/News';
+import News from './pages/News';
 import Image from './components/Image';
 const Home = () => {
     const royal = [

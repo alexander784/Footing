@@ -13,7 +13,7 @@ const Navbar = () => {
         <a href='/' className='text-white text-lg font-bold'>Footing</a>
         <div className='hidden md:flex space-x-8'>
           <a href='#' className='text-gray-300 hover:text-white'>Team</a>
-          <a href='#' className='text-gray-300 hover:text-white'>New signings</a>
+          <a href='/signings' className='text-gray-300 hover:text-white'>New signings</a>
           <a href='/player' className='text-gray-300 hover:text-white'>Players Info</a>
           <a href='#' className='text-gray-300 hover:text-white'>Shop</a>
           <a href='#' className='text-gray-300 hover:text-white'>Gallery</a>
