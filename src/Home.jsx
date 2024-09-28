@@ -9,6 +9,7 @@ import balling from './assets/balling.avif';
 import homepage from './assets/homepage.avif';
 import homepage1 from './assets/homepage1.avif';
 import ball1 from './assets/ball1.avif';
+import News from './components/pages/News';
 const Home = () => {
     const royal = [
         { image: balling },
@@ -45,6 +46,7 @@ const Home = () => {
             </Slider>
         </div>
        <About />
+       <News />
         </div>
     );
 }

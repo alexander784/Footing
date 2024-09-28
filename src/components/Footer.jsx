@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
         <div className="flex items-center mb-6 lg:mb-0">
           <img
-            src="https://via.placeholder.com/150x50" // Replace with your logo URL
+            src="https://via.placeholder.com/150x50"
             alt="Logo"
             className="w-36 h-auto"
           />
