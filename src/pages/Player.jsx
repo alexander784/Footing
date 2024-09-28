@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { db, storage } from '../../index';
+import { db, storage } from '../index';
 
 const PlayerUploadForm = () => {
   const [message, setMessage] = useState('');
