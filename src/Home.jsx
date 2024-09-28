@@ -33,7 +33,7 @@ const Home = () => {
     };
 
     return (
-        <div className='bg-blue-300'>
+        <div className='bg-green-500'>
         <div className="relative py-16 px-8">
             <Slider {...sliderSettings}>
                 {
