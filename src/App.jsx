@@ -7,6 +7,7 @@ import About from './components/About';
 import Player from './pages/Player';
 import News from './pages/News';
 import Signings from './pages/Signings';
+import Signin from './pages/Signin';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
        <Route path='/player' element={<Player />}/>
        <Route path='/news' element={<News />}/>
        <Route path='/signings' element={<Signings />}/>
+       <Route path='/signin' element={<Signin />}/>
       </Routes>
     </Router>
     {/* <About /> */}

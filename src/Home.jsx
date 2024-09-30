@@ -12,6 +12,7 @@ import ball1 from './assets/ball1.avif';
 import News from './pages/News';
 import Image from './components/Image';
 const Home = () => {
+
     const royal = [
         { image: balling },
         { image: homepage},
@@ -33,6 +34,11 @@ const Home = () => {
         centerPadding: '0',
     };
 
+    const Logout = () => {
+        localStorage.clear()
+        window.location.reload()
+    }
+
     return (
         <div className=''>
         <div className="relative pt-16">
@@ -42,9 +48,11 @@ const Home = () => {
                         <div key={index} className='h-screen'>
                             <img src={item.image} alt={''} className='w-full h-screen' />
                         </div>
+                        
                     ))
                 }
             </Slider>
+            <button onClick={Logout}>Logout</button>
         </div>
        <About />
        <News />

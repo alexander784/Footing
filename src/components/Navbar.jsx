@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
 
         <div className='hidden md:block'>
-          <a href='#' className='bg-orange-900 text-white px-4 py-2 rounded hover:bg-orange-600'>Log in</a>
+          <a href='/signin' className='bg-orange-900 text-white px-4 py-2 rounded hover:bg-orange-600'>Log in</a>
         </div>
         <div className='md:hidden'>
           <button onClick={toggleMobileMenu} className='text-white focus:outline-none'>
