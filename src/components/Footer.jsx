@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-900 text-white py-8">
+    <footer className="bg-green-500 text-white py-8">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center">
         <div className="flex items-center mb-6 lg:mb-0">
           <img
@@ -39,8 +39,8 @@ const Footer = () => {
       <hr className='bg-gray-100 font-bold'/>
 
       {/* Copyright Section */}
-      <div className="text-center text-gray-500 mt-6">
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
+      <div className="text-center text-white mt-6">
+        <p>&copy; {new Date().getFullYear()} Footing FC. All Rights Reserved.</p>
       </div>
     </footer>
   );

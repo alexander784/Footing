@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-gray-900 p-4'>
+    <nav className='bg-green-500 p-4  flex'>
       <div className='container mx-auto flex justify-between items-center'>
         <a href='/' className='text-white text-lg font-bold'>Footing</a>
         <div className='hidden md:flex space-x-8'>
@@ -17,7 +17,7 @@ const Navbar = () => {
           <a href='/player' className='text-gray-300 hover:text-white'>Players Info</a>
           <a href='#' className='text-gray-300 hover:text-white'>Shop</a>
           <a href='#' className='text-gray-300 hover:text-white'>Gallery</a>
-          <a href='#' className='text-gray-300 hover:text-white'>Contact Us</a>
+          {/* <a href='#' className='text-gray-300 hover:text-white'>Contact Us</a> */}
         </div>
 
         <div className='hidden md:block'>

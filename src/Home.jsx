@@ -34,12 +34,12 @@ const Home = () => {
     };
 
     return (
-        <div className='bg-green-500'>
-        <div className="relative py-16 px-8">
+        <div className=''>
+        <div className="relative pt-16">
             <Slider {...sliderSettings}>
                 {
                     royal.map((item, index) => (
-                        <div key={index} className=''>
+                        <div key={index} className='h-screen'>
                             <img src={item.image} alt={''} className='w-full h-screen' />
                         </div>
                     ))
