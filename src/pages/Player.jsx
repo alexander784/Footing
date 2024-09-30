@@ -5,6 +5,11 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../index';
 
 const PlayerUploadForm = () => {
+
+  const Logout = () => {
+    localStorage.clear()
+    window.location.reload()
+}
   const [message, setMessage] = useState('');
 
   const formik = useFormik({
@@ -124,6 +129,9 @@ const PlayerUploadForm = () => {
           Upload
         </button>
       </form>
+      <button onClick={Logout}>Logout</button>
+
+      
     </div>
   );
 };

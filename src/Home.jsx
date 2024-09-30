@@ -34,10 +34,7 @@ const Home = () => {
         centerPadding: '0',
     };
 
-    const Logout = () => {
-        localStorage.clear()
-        window.location.reload()
-    }
+   
 
     return (
         <div className=''>
@@ -52,7 +49,7 @@ const Home = () => {
                     ))
                 }
             </Slider>
-            <button onClick={Logout}>Logout</button>
+           
         </div>
        <About />
        <News />

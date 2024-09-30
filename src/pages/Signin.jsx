@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
 import Home from '../Home';
 import { auth, provider } from '../index'; 
+import SigningsList from './Signings';
+import PlayerUploadForm from './Player';
 
 const Signin = () => {
     const [email, setEmail] = useState('');
@@ -38,7 +40,7 @@ const Signin = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             {userEmail ? (
-                <Home />  
+                <PlayerUploadForm />
             ) : (
                 <div className="bg-white shadow-md rounded px-8 py-10 max-w-md w-full">
                     <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
