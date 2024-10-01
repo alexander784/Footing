@@ -21,11 +21,11 @@ const PlayerUploadForm = () => {
         let passportUrl = '';
 
         if (values.idCopy) {
-          idCopyUrl = await uploadFile(values.idCopy, `players/${values.name}_idCopy`);
+          idCopyUrl = await uploadFile(values.idCopy, `players/${values}_idCopy`);
         }
 
         if (values.passport) {
-          passportUrl = await uploadFile(values.passport, `players/${values.name}_passport`);
+          passportUrl = await uploadFile(values.passport, `players/${values}_passport`);
         }
 
         await addDoc(collection(db, 'players'), {
