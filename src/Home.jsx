@@ -2,21 +2,21 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import Royal4 from './assets/Royalfc4.jpeg';
 import Royal5 from './assets/Royalfc5.jpeg';
 import About from './components/About';
-import balling from './assets/balling.avif';
-import homepage from './assets/homepage.avif';
-import homepage1 from './assets/homepage1.avif';
+import ballin3 from './assets/ballin3.avif';
+import balling2 from './assets/balling2.avif';
+import balling1 from './assets/balling1.avif';
 import ball1 from './assets/ball1.avif';
 import News from './pages/News';
 import Image from './components/Image';
+
 const Home = () => {
 
     const royal = [
-        { image: balling },
-        { image: homepage},
-        { image: homepage1},
+        { image: ballin3 },
+        { image: balling2 },
+        { image: balling1 },
         { image: ball1 },
         { image: Royal5 },
     ];
@@ -30,30 +30,30 @@ const Home = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         arrows: true,
-        centerMode: true,
+        centerMode: false, 
         centerPadding: '0',
+        adaptiveHeight: true,
     };
 
-   
-
     return (
-        <div className=''>
-        <div className="relative pt-16">
+        <div className="relative bg-black">
             <Slider {...sliderSettings}>
                 {
                     royal.map((item, index) => (
                         <div key={index} className='h-screen'>
-                            <img src={item.image} alt={''} className='w-full h-screen' />
+                            <img 
+                                src={item.image} 
+                                alt={`Slide ${index}`} 
+                                className='w-full h-full object-cover'
+                            />
                         </div>
-                        
                     ))
                 }
             </Slider>
            
-        </div>
-       <About />
-       <News />
-       <Image />
+            <About />
+            <News />
+            <Image />
         </div>
     );
 }

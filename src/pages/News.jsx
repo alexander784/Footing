@@ -18,7 +18,7 @@ const News = () => {
   }, []);
 
   return (
-    <div className="bg-green-500 max-w-8xl mx-auto p-6 h-auto lg:h-80"> 
+    <div className="bg-black max-w-8xl mx-auto p-6 h-auto lg:h-80"> 
       <h2 className="text-2xl lg:text-3xl font-bold mb-4">Latest News</h2>
       {newsArticles.length === 0 ? (
         <p>No news Today</p>

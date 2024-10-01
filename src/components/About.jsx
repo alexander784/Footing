@@ -6,7 +6,7 @@ import Africanfootball from '../assets/Africanfootball.avif';
 const About = () => {
 
   return (
-    <div>
+    <div className='h-screen'>
       <div 
         className="h-screen bg-cover bg-center flex flex-col items-center justify-center relative" 
         style={{ backgroundImage: `url(${Africanfootball})`, backgroundAttachment: 'fixed' }}
