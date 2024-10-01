@@ -17,10 +17,10 @@ const About = () => {
             <div className="p-4">
               <h3 className="text-white text-xl font-bold mb-2">Fueled by enthusiasm, shaped by expertise</h3>
               <p className="mb-4 text-white">
-              Foot FC is a passionate football club representing the vibrant spirit of the central region in the heart of Mt. Kenya. <br />
+              Black Stars is a passionate football club representing the vibrant spirit of the central region in the heart of Mt. Kenya. <br />
               Established with a deep-rooted love for the game, we are proud to compete in Division Two,
-               where we showcase the immense talent and determination of our local players. <br />
-                Our mission is to make outdoor adventures accessible, enjoyable, and safe for everyone.
+              where we showcase the immense talent and determination of our local players. <br />
+              Our mission is to make outdoor adventures accessible, enjoyable, and safe for everyone.
               </p>
             </div>
           </div>

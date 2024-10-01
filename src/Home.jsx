@@ -2,7 +2,7 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import Royal5 from './assets/Royalfc5.jpeg';
+import ball3 from './assets/ball3.avif';
 import About from './components/About';
 import ballin3 from './assets/ballin3.avif';
 import balling2 from './assets/balling2.avif';
@@ -12,13 +12,12 @@ import News from './pages/News';
 import Image from './components/Image';
 
 const Home = () => {
-
     const royal = [
-        { image: ballin3 },
-        { image: balling2 },
-        { image: balling1 },
-        { image: ball1 },
-        { image: Royal5 },
+        { image: ballin3, text: "Home of Champions" },
+        { image: balling2, text: "Where Balling Reigns" },
+        { image: balling1, text: "Kings of Elastico" },
+        { image: ball1, text: "Soccer is our meal" },
+        { image: ball3, text: "Football Monarchs" },
     ];
 
     const sliderSettings = {
@@ -40,12 +39,16 @@ const Home = () => {
             <Slider {...sliderSettings}>
                 {
                     royal.map((item, index) => (
-                        <div key={index} className='h-screen'>
+                        <div key={index} className='h-screen relative'>
                             <img 
                                 src={item.image} 
                                 alt={`Slide ${index}`} 
                                 className='w-full h-full object-cover'
                             />
+                            <div className='absolute top-1/2 left-0 transform -translate-y-1/2 p-4 text-white'>
+                                <h2 className='text-3xl font-bold'>{item.text}</h2>
+                                <p className='mt-2'></p>
+                            </div>
                         </div>
                     ))
                 }

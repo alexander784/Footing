@@ -19,11 +19,11 @@ const News = () => {
 
   return (
     <div className="bg-black max-w-8xl mx-auto p-6 h-auto lg:h-80"> 
-      <h2 className="text-2xl lg:text-3xl font-bold mb-4">Latest News</h2>
+      <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white text-center">Latest News</h2>
       {newsArticles.length === 0 ? (
         <p>No news Today</p>
       ) : (
-        <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 overflow-x-auto"> 
+        <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 overflow-x-auto justify-center"> 
           {newsArticles.map(news => (
             <div key={news.id} className="bg-white p-4 shadow-lg rounded-lg min-w-[280px] lg:min-w-[300px]">
               <h3 className="text-lg lg:text-xl font-semibold">{news.title}</h3>
