@@ -129,8 +129,6 @@ const PlayerUploadForm = () => {
           Upload
         </button>
       </form>
-      <button onClick={Logout}>Logout</button>
-
       
     </div>
   );
