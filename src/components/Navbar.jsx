@@ -65,11 +65,14 @@ const Navbar = () => {
       <div className='container mx-auto flex justify-between items-center'>
         <a href='/' className='text-white text-lg font-bold'>Black Stars</a>
         <div className='hidden md:flex space-x-8'>
-          <a href='/Display' className='text-gray-300 hover:text-white'>Team</a>
-          <a href='/signings' className='text-gray-300 hover:text-white'>New signings</a>
-          <a href='/player' className='text-gray-300 hover:text-white'>Players Info</a>
-          <a href='#' className='text-gray-300 hover:text-white'>Shop</a>
-          <a href='#' className='text-gray-300 hover:text-white'>Gallery</a>
+          <a href='/Display' className='text-white hover:text-gray-300'>Team</a>
+          <a href='/signings' className='text-white hover:text-gray-300'>New signings</a>
+          {
+            user && (
+            <a href='/player' className='text-white hover:text-gray-300'>Players Info</a>
+          )}
+          <a href='#' className='text-white hover:text-gray-300'>Shop</a>
+          <a href='#' className='text-white hover:text-gray-300'>Gallery</a>
         </div>
 
         <div className='hidden md:block relative'>
@@ -78,9 +81,7 @@ const Navbar = () => {
             <div ref={dropdownRef}>
               <button onClick={toggleDropdown} 
                className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-600">
-
                 {user.displayName || user.email}
-                
               </button>
               {
                 isDropdownOpen && (
@@ -93,7 +94,7 @@ const Navbar = () => {
                       Log out
                     </button>
                   </div>
-              )}
+                )}
             </div>
           ) : (
             <a href='/signin' className='bg-orange-900 text-white px-4 py-2 rounded hover:bg-orange-600'>Log in</a>

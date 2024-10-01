@@ -46,7 +46,7 @@ const Home = () => {
                                 className='w-full h-full object-cover'
                             />
                             <div className='absolute top-1/2 left-0 transform -translate-y-1/2 p-4 text-white'>
-                                <h2 className='text-3xl font-bold'>{item.text}</h2>
+                                <h2 className='text-3xl font-bold text-green-500'>{item.text}</h2>
                                 <p className='mt-2'></p>
                             </div>
                         </div>
