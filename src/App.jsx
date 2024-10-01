@@ -9,6 +9,7 @@ import News from './pages/News';
 import Signings from './pages/Signings';
 import Signin from './pages/Signin';
 import Display from './pages/Display';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/signings' element={<Signings />} />
             <Route path='/signin' element={<Signin />} />
             <Route path='/display' element={<Display />} />
+            <Route path='/gallery' element={<Gallery />} />
           </Routes>
         </main>
       </Router>

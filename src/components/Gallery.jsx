@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { ref,uploadBytesResumable,getDownloadURL } from 'firebase/storage';
+import { storage } from '..';
 
 const Gallery = () => {
   const [file, setFile] = useState(null);
@@ -30,7 +32,7 @@ const Gallery = () => {
         getDownloadURL(uploadTask.snapshot.ref)
         .then((downloadURL) => {
           setImageURL(downloadURL);
-          console.log('FIle available at', downloadURL);
+          console.log('File available at', downloadURL);
         });
       }
     );
@@ -40,8 +42,14 @@ const Gallery = () => {
 
 
   return (
-    <div></div>
-  )
-}
-
+      <div>
+        <h2>Gallery</h2>
+        <input type="file" onChange={handleFileChange} />
+        <button onClick={handleUpload}>Upload</button>
+        <p>Upload progress: {progress}%</p>
+        {imageURL && <img src={imageURL} alt="Uploaded file" />}
+      </div>
+    );
+  };
+  
 export default Gallery
