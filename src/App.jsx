@@ -10,6 +10,7 @@ import Signings from './pages/Signings';
 import Signin from './pages/Signin';
 import Display from './pages/Display';
 import Gallery from './components/Gallery';
+import Showroom from './pages/Showroom';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/signin' element={<Signin />} />
             <Route path='/display' element={<Display />} />
             <Route path='/gallery' element={<Gallery />} />
+            <Route path='/showroom' element={<Showroom />} />
           </Routes>
         </main>
       </Router>

@@ -72,7 +72,12 @@ const Navbar = () => {
             <a href='/player' className='text-white hover:text-gray-300'>Players Info</a>
           )}
           <a href='#' className='text-white hover:text-gray-300'>Shop</a>
-          <a href='/gallery' className='text-white hover:text-gray-300'>Gallery</a>
+          {
+            user && (
+            <a href='/gallery' className='text-white hover:text-gray-300'>Gallery</a>
+            )}
+            <a href='/showroom' className='text-white hover:text-gray-300'>Showroom</a>
+
         </div>
 
         <div className='hidden md:block relative'>
