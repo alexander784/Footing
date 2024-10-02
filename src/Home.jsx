@@ -10,6 +10,8 @@ import balling1 from './assets/balling1.avif';
 import ball1 from './assets/ball1.avif';
 import News from './pages/News';
 import Image from './components/Image';
+import Results from './components/Results';
+import Scoreboard from './components/Results';
 
 const Home = () => {
     const royal = [
@@ -55,6 +57,8 @@ const Home = () => {
             </Slider>
            
             <About />
+            {/* <Results /> */}
+            <Scoreboard />
             <News />
             <Image />
         </div>
