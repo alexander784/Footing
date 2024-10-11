@@ -1,8 +1,6 @@
 ## Black stars Football Club
 Black stars FC a dedicated platform for Black stars fc fans  to stay updated with the latest news, player signings, and view the team's gallery. This project is built using modern web development technologies and practices, with Firebase for real-time data management and Docker for containerization.
 
-
-
 ## Features
 
 
