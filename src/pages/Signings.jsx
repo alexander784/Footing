@@ -23,18 +23,18 @@ const SigningsList = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-4">Recent Signings</h2>
+    <div className="max-w-4xl mx-auto p-4 md:p-6">
+      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Recent Signings</h2>
       {signings.length === 0 ? (
-        <p>No signings.</p>
+        <p className="text-center">No signings available.</p>
       ) : (
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {signings.map(signing => (
             <div key={signing.id} className="bg-white p-4 shadow-lg rounded-lg">
-              <h3 className="text-xl font-semibold">{signing.name}</h3>
-              <p><strong>Age:</strong> {signing.age}</p>
-              <p><strong>Former Club:</strong> {signing.formerClub}</p>
-              <p><strong>Position:</strong> {signing.position}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2">{signing.name}</h3>
+              <p className="mb-1"><strong>Age:</strong> {signing.age}</p>
+              <p className="mb-1"><strong>Former Club:</strong> {signing.formerClub}</p>
+              <p className="mb-1"><strong>Position:</strong> {signing.position}</p>
             </div>
           ))}
         </div>

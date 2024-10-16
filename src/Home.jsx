@@ -55,11 +55,11 @@ const Home = () => {
                     ))
                 }
             </Slider>
+            <News />
+
            
             <About />
-            {/* <Results /> */}
             <Scoreboard />
-            <News />
             <Image />
         </div>
     );

@@ -11,6 +11,7 @@ import Signin from './pages/Signin';
 import Display from './pages/Display';
 import Gallery from './components/Gallery';
 import Showroom from './pages/Showroom';
+import AddNews from './pages/AddNews';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/display' element={<Display />} />
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/showroom' element={<Showroom />} />
+            <Route path='/addnews' element={<AddNews />} />
           </Routes>
         </main>
       </Router>

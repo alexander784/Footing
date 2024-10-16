@@ -5,6 +5,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); 
   const dropdownRef = useRef(null);
 
   const toggleMobileMenu = () => {
@@ -60,46 +61,56 @@ const Navbar = () => {
       });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true); 
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className='bg-black p-4 flex h-30'>
+    <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 font-bold ${isScrolled ? 'bg-black' : 'bg-transparent'} p-4 flex h-20`}>
       <div className='container mx-auto flex justify-between items-center'>
         <a href='/' className='text-white text-lg font-bold'>Black Stars</a>
         <div className='hidden md:flex space-x-8'>
           <a href='/Display' className='text-white hover:text-gray-300'>Team</a>
           <a href='/signings' className='text-white hover:text-gray-300'>New signings</a>
-          {
-            user && (
+          {user && (
             <a href='/player' className='text-white hover:text-gray-300'>Players Info</a>
           )}
           <a href='#' className='text-white hover:text-gray-300'>Shop</a>
-          {
-            user && (
+          <a href='/addnews' className='text-white hover:text-gray-300'>AddNews</a>
+          {user && (
             <a href='/gallery' className='text-white hover:text-gray-300'>Gallery</a>
-            )}
-            <a href='/showroom' className='text-white hover:text-gray-300'>Showroom</a>
-
+          )}
+          <a href='/showroom' className='text-white hover:text-gray-300'>Showroom</a>
         </div>
 
         <div className='hidden md:block relative'>
-          {
-           user ? (
+          {user ? (
             <div ref={dropdownRef}>
-              <button onClick={toggleDropdown} 
-               className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-600">
+              <button onClick={toggleDropdown} className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-600">
                 {user.displayName || user.email}
               </button>
-              {
-                isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                    <a href='/profile' className='block px-4 py-2 text-gray-700 hover:bg-gray-100'>Profile</a>
-                    <button
-                      onClick={handleSignOut}
-                      className='block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100'
-                    >
-                      Log out
-                    </button>
-                  </div>
-                )}
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
+                  <a href='/profile' className='block px-4 py-2 text-gray-700 hover:bg-gray-100'>Profile</a>
+                  <button
+                    onClick={handleSignOut}
+                    className='block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100'
+                  >
+                    Log out
+                  </button>
+                </div>
+              )}
             </div>
           ) : (
             <a href='/signin' className='bg-orange-900 text-white px-4 py-2 rounded hover:bg-orange-600'>Log in</a>
