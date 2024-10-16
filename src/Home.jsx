@@ -37,7 +37,7 @@ const Home = () => {
     };
 
     return (
-        <div className="relative bg-black">
+        <div className="relative bg-black overflow-hidden bg-fixed">
             <Slider {...sliderSettings}>
                 {
                     royal.map((item, index) => (

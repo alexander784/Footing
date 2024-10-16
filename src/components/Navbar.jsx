@@ -77,7 +77,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 font-bold ${isScrolled ? 'bg-black' : 'bg-transparent'} p-4 flex h-20`}>
+    <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 font-bold ${isScrolled ? 'bg-green-950' : 'bg-transparent'} p-4 flex h-20`}>
       <div className='container mx-auto flex justify-between items-center'>
         <a href='/' className='text-white text-lg font-bold'>Black Stars</a>
         <div className='hidden md:flex space-x-8'>
@@ -87,15 +87,10 @@ const Navbar = () => {
             <a href='/player' className='text-white hover:text-gray-300'>Players Info</a>
           )}
           <a href='#' className='text-white hover:text-gray-300'>Shop</a>
-          
-          <a href='/news' className='text-white hover:text-gray-300'>News</a>
           {user && (
-            
             <a href='/addnews' className='text-white hover:text-gray-300'>Addnews</a>
           )}
-
           {user && (
-            
             <a href='/gallery' className='text-white hover:text-gray-300'>Gallery</a>
           )}
           <a href='/showroom' className='text-white hover:text-gray-300'>Showroom</a>
@@ -133,14 +128,43 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <div className={`md:hidden mt-4 space-y-2 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-        <a href='#' className='block text-gray-300 hover:text-white'>Team</a>
-        <a href='#' className='text-gray-300 hover:text-white'>About</a>
-        <a href='#' className='text-gray-300 hover:text-white'>Footing</a>
-        <a href='#' className='text-gray-300 hover:text-white'>Royal</a>
-        <a href='#' className='text-gray-300 hover:text-white'>Shop</a>
-        <a href='#' className='text-gray-300 hover:text-white'>Gallery</a>
-        <a href='#' className='text-gray-300 hover:text-white'>Contact Us</a>
+        <a href='/Display' className='block text-gray-300 hover:text-white'>Team</a>
+        <a href='/signings' className='block text-gray-300 hover:text-white'>New signings</a>
+        {user && (
+          <a href='/player' className='block text-gray-300 hover:text-white'>Players Info</a>
+        )}
+        <a href='#' className='block text-gray-300 hover:text-white'>Shop</a>
+        {user && (
+          <a href='/addnews' className='block text-gray-300 hover:text-white'>Addnews</a>
+        )}
+        {user && (
+          <a href='/gallery' className='block text-gray-300 hover:text-white'>Gallery</a>
+        )}
+        <a href='/showroom' className='block text-gray-300 hover:text-white'>Showroom</a>
+        
+        {/* Log in button in mobile menu */}
+        {user ? (
+          <div ref={dropdownRef}>
+            <button onClick={toggleDropdown} className="bg-gray-800 text-white w-full text-left px-4 py-2 rounded hover:bg-gray-600">
+              {user.displayName || user.email}
+            </button>
+            {isDropdownOpen && (
+              <div className="mt-2 w-full bg-white rounded-md shadow-lg z-20">
+                <a href='/profile' className='block px-4 py-2 text-gray-700 hover:bg-gray-100'>Profile</a>
+                <button
+                  onClick={handleSignOut}
+                  className='block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100'
+                >
+                  Log out
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <a href='/signin' className='bg-orange-900 text-white w-full text-left px-4 py-2 rounded hover:bg-orange-600'>Log in</a>
+        )}
       </div>
     </nav>
   );

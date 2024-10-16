@@ -47,7 +47,7 @@ const News = () => {
                 <img 
                   src={news.imageUrl} 
                   alt={news.title} 
-                  className="w-full h-[300px] object-cover  mb-4" 
+                  className="w-full h-[300px] object-cover mb-4 transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
                 />
               )}
               <h3 className="text-white text-lg lg:text-xl font-semibold">{news.title}</h3>
