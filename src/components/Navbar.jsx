@@ -87,8 +87,15 @@ const Navbar = () => {
             <a href='/player' className='text-white hover:text-gray-300'>Players Info</a>
           )}
           <a href='#' className='text-white hover:text-gray-300'>Shop</a>
-          <a href='/addnews' className='text-white hover:text-gray-300'>AddNews</a>
+          
+          <a href='/news' className='text-white hover:text-gray-300'>News</a>
           {user && (
+            
+            <a href='/addnews' className='text-white hover:text-gray-300'>Addnews</a>
+          )}
+
+          {user && (
+            
             <a href='/gallery' className='text-white hover:text-gray-300'>Gallery</a>
           )}
           <a href='/showroom' className='text-white hover:text-gray-300'>Showroom</a>

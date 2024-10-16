@@ -62,7 +62,7 @@ const AddNews = () => {
       </div>
       <button
         type="submit"
-        className={`bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 ${isSubmitting ? 'opacity-50' : ''}`}
+        className={`bg-orange-900 text-white py-2 px-4 rounded ${isSubmitting ? 'opacity-50' : ''}`}
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Submitting...' : 'Submit News'}
