@@ -34,7 +34,7 @@ const News = () => {
   };
 
   return (
-    <div className="bg-black max-w-8xl mx-auto p-6 h-screen">
+    <div className="bg-green-950 max-w-8xl mx-auto p-6 h-screen">
       <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white text-center">Latest News</h2>
 
       {newsArticles.length === 0 ? (

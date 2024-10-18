@@ -8,9 +8,9 @@ import score2 from '../assets/score2.jpeg';
 
 const ScoreboardColumn = () => {
   return (
-    <div className="flex flex-col items-center space-y-12 bg-black text-white p-6">
+    <div className="flex flex-row space-x-6 items-center  bg-green-950 text-white p-6">
       
-      <div className="flex justify-between items-center w-full max-w-md bg-gray-800 p-4 rounded-lg">
+      <div className="flex justify-between items-center w-full max-w-md bg-gray-800 p-4 transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
         <div className="flex flex-col items-center w-1/3">
           <img
             src={score2}
@@ -23,7 +23,7 @@ const ScoreboardColumn = () => {
         <div className="flex flex-col justify-center items-center w-1/3">
           <p className="text-gray-400 text-sm">30 Sep 2024</p>
           <p className="text-gray-400 text-xs mb-2">cup league</p>
-          <div className="bg-gray-300 text-black text-3xl font-bold w-24 h-24 flex items-center justify-center rounded-lg">
+          <div className="bg-gray-300 text-black text-3xl font-bold w-24 h-24 flex items-center justify-center">
             4<span className="mx-2">-</span>2
           </div>
         </div>
@@ -38,7 +38,7 @@ const ScoreboardColumn = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center w-full max-w-md bg-gray-800 p-4 rounded-lg">
+      <div className="flex justify-between items-center w-full max-w-md bg-gray-800 p-4 transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
         <div className="flex flex-col items-center w-1/3">
           <img
             src={score3}
@@ -51,7 +51,7 @@ const ScoreboardColumn = () => {
         <div className="flex flex-col justify-center items-center w-1/3">
           <p className="text-gray-400 text-sm">30 Sep 2024</p>
           <p className="text-gray-400 text-xs mb-2">cup league</p>
-          <div className="bg-gray-300 text-black text-3xl font-bold w-24 h-24 flex items-center justify-center rounded-lg">
+          <div className="bg-gray-300 text-black text-3xl font-bold w-24 h-24 flex items-center justify-center">
             3<span className="mx-2">-</span>1
           </div>
         </div>
@@ -66,7 +66,7 @@ const ScoreboardColumn = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center w-full max-w-md bg-gray-800 p-4 rounded-lg">
+      <div className="flex justify-between items-center w-full max-w-md bg-gray-800 p-4 transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
         <div className="flex flex-col items-center w-1/3">
           <img
             src={score4}

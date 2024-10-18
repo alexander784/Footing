@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import LOGO from "../assets/LOGO.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -79,7 +80,10 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 font-bold ${isScrolled ? 'bg-green-950' : 'bg-transparent'} p-4 flex h-20`}>
       <div className='container mx-auto flex justify-between items-center'>
-        <a href='/' className='text-white text-lg font-bold'>Black Stars</a>
+        <a href='/' className='flex items-center'>
+      <img src={LOGO} alt='Black Stars Logo' className='h-15 w-10' />
+        </a>
+
         <div className='hidden md:flex space-x-8'>
           <a href='/Display' className='text-white hover:text-gray-300'>Team</a>
           <a href='/signings' className='text-white hover:text-gray-300'>New signings</a>
